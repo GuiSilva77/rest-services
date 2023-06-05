@@ -10,17 +10,10 @@ import java.util.Locale;
 @RestController
 public class HelloController {
 
-    private MessageSource messageSource;
 
-    public HelloController(MessageSource messageSource) {
-        this.messageSource = messageSource;
-    }
 
     @GetMapping("/hello")
     public String HelloWord() {
-        Locale locale = LocaleContextHolder.getLocale();
-
-        messageSource.getMessage("good.morning.message", null, "Default Message", locale);
 
         return "Hello World";
     }

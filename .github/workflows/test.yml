@@ -25,6 +25,12 @@ jobs:
       - name: Run tests
         run: mvn test --batch-mode
 
+      - name: Publish test reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: Test Reports
+          path: target/surefire-reports
+
       - name: Block push on test failure
         run: |
           if [[ ${{ job.status }} == 'failure' ]]; then

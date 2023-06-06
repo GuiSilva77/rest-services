@@ -51,6 +51,8 @@ public class Funcionario {
     public Funcionario() {
     }
 
+
+
     public Funcionario(int codigo, String nome, Date dataNascimento, String cpf, String email, char sexo, double salario, String cidade, String uf, Departamento Departamento, Date dataHoraCadastro, boolean ativo) {
         this.codigo = codigo;
         this.nome = nome;

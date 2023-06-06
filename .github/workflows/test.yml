@@ -30,6 +30,7 @@ jobs:
         with:
           name: Test Reports
           path: target/surefire-reports
+        if: always()
 
       - name: Block push on test failure
         run: |
